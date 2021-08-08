@@ -1,0 +1,176 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 56px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: #fff;
+    padding: 0 16px;
+    color: #050505;
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 10px;
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+
+    &__input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f2f5;
+        padding: 10px;
+        border-radius: 33px;
+        .search {
+            display: inline-block;
+            width: 30px;
+            height: 28px;
+            font-size: 20px;
+            text-align: center;
+            color: #65676b;
+            svg {
+                position: relative;
+                top: 1px;
+                vertical-align: middle;
+            }
+        }
+        input {
+            font-family: 'Yantramanav', sans-serif;
+            border: none;
+            background-color: transparent;
+            font-size: 1.6rem;
+            letter-spacing: .5px;
+            display: none;
+        }
+    }
+
+    &__center {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+    }
+
+    &__nav-list {
+        &-item {
+            display: inline-block;
+            &-link {
+                display: inline-block;
+                padding: 5px 42px;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: #f0f2f5;
+                }
+            }
+
+            &-icon {
+                display: inline-block;
+                position: relative;
+                top: 2px;
+                color: #fff;
+            }
+        }
+
+        > .is-active {
+            position: relative;
+            &::after {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -7px;
+                display: block;
+                content: "";
+                width: 100%;
+                height: 2px;
+                background-color: #1877F2;
+            }
+            > a {
+                &:hover {
+                    background-color: transparent;
+                }
+            }  
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &__avatar {
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+        padding: 0 12px 0 6px;
+        height: 36px;
+        cursor: pointer;
+        text-decoration: none;
+        > .MuiAvatar-root {
+            width: 28px;
+            height: 28px;
+        }
+        &-name {
+            display: inline-block;
+            margin-left: 6px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        &:hover {
+            background-color: #f0f2f5;
+            border-radius: 50px;    
+        }
+    }
+
+    &__options {
+        display: flex;
+        align-items: center;
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f2f5;
+            border-radius: 50%;;
+            margin-right: 8px;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            &--menu {
+                background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yY/r/H_qIuxYLp8J.png);
+                background-position: -60px -14px;
+                background-size: 190px 58px;
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                display: inline-block;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                background-color: #DADDE1;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .header {
+            &__input {
+                > input {
+                    display: inline-block;
+                }
+            }
+        }    
+    }
+}
