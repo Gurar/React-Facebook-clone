@@ -1,0 +1,36 @@
+.sidebar-row {
+    display: flex;
+    align-items: center;
+    padding: 2px 0 2px 8px;
+    position: relative;
+    cursor: pointer;
+   
+    > .MuiAvatar-root {
+        width: 28px;
+        height: 28px;
+    }
+
+    > p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 12px 0;
+        margin-left: 10px;
+        color: #050505;
+    }
+
+    &:hover {
+        background-color: #DADDE1;
+        border-radius: 10px;
+    }
+
+    > .btn-see-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        background-color: #e4e6eb;
+        font-size: 14px;
+        border-radius: 50%;
+    }
+}
